@@ -36,13 +36,10 @@ module DUAL_PORT_RAM(
     if(WE_A)begin
        ram_vec[ADDR_A]<=D_IN_A;
        end
-       Q_OUT_A<=ram_vec[ADDR_A];
-       
-       end
+      end
        
     always@(posedge rclk)begin
     if(WE_B)
-       Q_OUT_B<=ram_vec[ADDR_B];
-       
+       Q_OUT_B<=ram_vec[ADDR_B];    
        end        
 endmodule

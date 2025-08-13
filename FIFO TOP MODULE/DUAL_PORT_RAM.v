@@ -25,7 +25,7 @@ module DUAL_PORT_RAM(
     input wclk,
     input rclk,
     input WE_A,
-    input WE_B,
+    input RE_B,
     input [2:0] ADDR_A,
     input [2:0] ADDR_B,
     output reg [31:0] Q_OUT_B
@@ -39,7 +39,7 @@ module DUAL_PORT_RAM(
       end
        
     always@(posedge rclk)begin
-    if(WE_B)
+        if(RE_B)
        Q_OUT_B<=ram_vec[ADDR_B];    
        end        
 endmodule

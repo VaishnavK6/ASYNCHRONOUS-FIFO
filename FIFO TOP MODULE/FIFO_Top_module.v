@@ -74,7 +74,7 @@ module FIFO_Top_module(
                                  .wclk(wclk),
                                  .rclk(rclk),
                                  .WE_A(w_en & ~full),
-                                 .WE_B(r_en & ~empty),
+                                 .RE_B(r_en & ~empty),
                                  .ADDR_A(wptr_bin[2:0]),
                                  .ADDR_B(rptr_bin[2:0]),
                                  .Q_OUT_B(rdata));
